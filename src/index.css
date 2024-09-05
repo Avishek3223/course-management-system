@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'flowbite';
+@import 'flowbite/dist/flowbite.css';
+
+body {
+    background: linear-gradient(to right, #fff0f9, #eef0ff);
+    /* Light pink to light blue gradient */
+    font-family: "Poppins", sans-serif;
+}

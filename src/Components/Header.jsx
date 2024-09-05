@@ -15,7 +15,7 @@ export default function Header() {
       {/* Collapse section */}
       <Navbar.Collapse>
 
-        <Navbar.Link className="text-[1.2rem] font-bold text-black" href="/courses" active>
+        <Navbar.Link className="text-[1.2rem] font-bold text-black" href="/" active>
           Courses
         </Navbar.Link>
         <Navbar.Link className="text-[1.2rem] font-bold text-black" href="/dashboard">

@@ -6,14 +6,16 @@ import CourseCardSkeleton from '../Components/CourseCardSkeleton';
 
 const CourseListingPage = () => {
   const dispatch = useDispatch();
-  const { courses, loading, error } = useSelector((state) => state.courseState); // Select state from Redux
-  const [searchQuery, setSearchQuery] = useState(''); // Initialize search query state
+  const { courses, loading, error } = useSelector((state) => state.courseState);
+  console.log('Courses from Redux:', courses);
+
+  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
-    dispatch(fetchCourses()); // Fetch courses on component mount
+    dispatch(fetchCourses());
   }, [dispatch]);
 
-  if (error) return <p className="text-red-500">Error: {error}</p>; // Display error if present
+  if (error) return <p className="text-red-500">Error: {error}</p>;
 
   // Filter courses based on search query
   const filteredCourses = courses.filter((course) => {

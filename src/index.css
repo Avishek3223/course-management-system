@@ -1,8 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import 'flowbite/dist/flowbite.css';
 @import 'flowbite';
+@import 'flowbite/dist/flowbite.css';
 
 body {
     background: linear-gradient(to right, #fff0f9, #eef0ff);

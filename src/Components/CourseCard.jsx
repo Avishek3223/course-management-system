@@ -1,8 +1,13 @@
+// CourseCard.jsx
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const CourseCard = ({ course }) => {
+  const navigate = useNavigate();
+
   // Destructure the course object
   const {
+    id,  // Assuming 'id' is part of the course object
     name,
     instructor,
     description,
@@ -23,8 +28,16 @@ const CourseCard = ({ course }) => {
     Closed: 'bg-red-100 text-red-800'
   };
 
+  // Handle card click
+  const handleCardClick = () => {
+    navigate(`/course/${id}`, { state: { course } });  // Pass course data to CourseDetails page
+  };
+
   return (
-    <div className="course-card px-1 w-[30rem] min-h-[35rem] bg-white shadow-lg rounded-lg overflow-hidden transform transition-all hover:scale-105 duration-300 max-md:w-[95vw]">
+    <div
+      className="course-card px-1 w-[30rem] min-h-[35rem] bg-white shadow-lg rounded-lg overflow-hidden transform transition-all hover:scale-105 duration-300 max-md:w-[95vw] cursor-pointer"
+      onClick={handleCardClick}
+    >
       <img src={thumbnail} alt={`${name} thumbnail`} className="w-[100vw] rounded-lg object-cover max-md:w-[100vw]" />
       <div className="p-6">
         <h2 className="text-2xl font-semibold text-gray-900 mb-3">{name}</h2>

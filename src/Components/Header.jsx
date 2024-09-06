@@ -50,14 +50,13 @@ export default function Header() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="/" className="block text-[1.2rem] font-bold text-black">
+          <div className="px-5 pt-2 pb-8 space-y-6 sm:px-5">
+            <a href="/" className="block text-[1.2rem] font-bold text-black border-t pt-4">
               Courses
             </a>
             <a
               href="/dashboard"
-              className="block text-[1.2rem] font-bold text-black"
-            >
+              className="block text-[1.2rem] font-bold text-black"            >
               Dashboard
             </a>
             <a href="/about" className="block text-[1.2rem] font-bold text-black">

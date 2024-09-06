@@ -26,6 +26,7 @@ export const fetchCourses = () => {
     dispatch(fetchCoursesRequest());
     try {
       const response = await axios.get(API_URL);
+      console.log(response)
       dispatch(fetchCoursesSuccess(response.data));
     } catch (error) {
       dispatch(fetchCoursesFailure(error.message));

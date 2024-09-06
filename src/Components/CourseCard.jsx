@@ -16,9 +16,6 @@ const CourseCard = ({ course }) => {
     duration,
     schedule,
     location,
-    prerequisites,
-    syllabus = [], // Default to empty array if undefined
-    students = []   // Default to empty array if undefined
   } = course;
 
   // Add color coding for enrollment status
